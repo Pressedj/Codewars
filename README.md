@@ -3,7 +3,7 @@
 
 Codewars Profile and completed solutions repo
  
-## Tech used: ![PYTHON BADGE]("https://img.shields.io/static/v1?label=|&message=PYTHON&color=52985b&style=plastic&logo=python) ![R BADGE](https://img.shields.io/static/v1?label=|&message=R&color=52985b&style=plastic&logo=r) ![JAVASCRIPT BADGE](https://img.shields.io/static/v1?label=|&message=JAVASCRIPT&color=3c7f5d&style=plastic&logo=javascript)
+## Tech used: ![PYTHON BADGE](https://img.shields.io/static/v1?label=|&message=PYTHON&color=52985b&style=plastic&logo=python) ![R BADGE](https://img.shields.io/static/v1?label=|&message=R&color=52985b&style=plastic&logo=r) ![JAVASCRIPT BADGE](https://img.shields.io/static/v1?label=|&message=JAVASCRIPT&color=3c7f5d&style=plastic&logo=javascript)
 
 
 ## Optimizations
