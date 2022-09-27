@@ -449,3 +449,24 @@ function persistence(n) {
     }
     return j
 }
+
+//6kyu smile Counter
+//link https://www.codewars.com/kata/583203e6eb35d7980400002a/solutions/javascript?filter=me&sort=best_practice&invalids=false
+
+function countSmileys(arr) {
+    let sorted = arr.filter(function (e) {
+        let j = true
+        if (e.length === 3 || e.length === 2) {
+            e[0] === ':' || e[0] === ';' ? j = true : j = false
+            if (e.length === 3 && j === true) {
+                e[1] === '-' || e[1] === '~' ? j = true : j = false
+            }
+            if (j === true) {
+                e[(e.length - 1)] === 'D' || e[(e.length - 1)] === ')' ? j = true : j = false
+            }
+            if (j === true) { return e }
+        }
+
+    })
+    return sorted.length
+}
