@@ -430,3 +430,22 @@ function isValidWalk(walk) {
         return false
     }
 }
+
+//7kyu Two to One
+//Link https://www.codewars.com/kata/5656b6906de340bd1b0000ac/train/javascript
+function longest(s1, s2) {
+    let a = (s1 + s2).trim().split('')
+    return a = [...new Set(a)].sort().join('')
+}
+
+//6kyu Persistent Bugger.
+//Link: https://www.codewars.com/kata/55bf01e5a717a0d57e0000ec/train/javascript
+function persistence(n) {
+    let j = 0
+    for (let i = 1; n >= 10; i++) {
+        n = n.toString().split('').reduce(
+            (preVal, curVal) => parseInt(preVal) * parseInt(curVal))
+        j = i
+    }
+    return j
+}
