@@ -454,7 +454,7 @@ function persistence(n) {
 //link https://www.codewars.com/kata/583203e6eb35d7980400002a/solutions/javascript?filter=me&sort=best_practice&invalids=false
 
 function countSmileys(arr) {
-    let sorted = arr.filter(function (e) {
+    let smileCount = arr.filter(function (e) {
         let j = true
         if (e.length === 3 || e.length === 2) {
             e[0] === ':' || e[0] === ';' ? j = true : j = false
@@ -468,5 +468,21 @@ function countSmileys(arr) {
         }
 
     })
-    return sorted.length
+    return smileCount.length
 }
+// Tribonacci Sequence 6kyu
+//link: https://www.codewars.com/kata/556deca17c58da83c00002db/train/javascript
+
+function tribonacci(arr, n) {
+    let holder = arr
+    if (n > 2) {
+        holder.push((holder[0] + holder[1] + holder[2]))
+        for (let i = 0; i < (n - 4); i++) {
+            let val = holder[(holder.length - 1)]
+                + holder[(holder.length - 2)]
+                + holder[(holder.length - 3)]
+            holder.push(val)
+        }
+        return holder
+    }
+    return n < 0 ? [] : holder.slice(0, n) 
