@@ -485,4 +485,13 @@ function tribonacci(arr, n) {
         }
         return holder
     }
-    return n < 0 ? [] : holder.slice(0, n) 
+    return n < 0 ? [] : holder.slice(0, n)
+
+
+// 8kyu Difference of Volumes of Cuboids
+//link https://www.codewars.com/kata/58cb43f4256836ed95000f97/solutions/javascript
+function findDifference(a, b) {
+    let sumA = a.reduce((curVal, preVal) => curVal * preVal)
+    let sumB = b.reduce((curVal, preVal) => curVal * preVal)
+    return Math.abs(sumA - sumB)
+}
