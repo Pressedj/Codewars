@@ -494,4 +494,10 @@ function findDifference(a, b) {
     let sumA = a.reduce((curVal, preVal) => curVal * preVal)
     let sumB = b.reduce((curVal, preVal) => curVal * preVal)
     return Math.abs(sumA - sumB)
+    }
+
+//8kyu Square(n) Sum
+//link: https://www.codewars.com/kata/515e271a311df0350d00000f/train/javascript
+function squareSum(num) {
+    return num.length != 0 ? num.reduce((preVal, curVal) => preVal + Math.pow(curVal, 2), 0) : 0
 }
