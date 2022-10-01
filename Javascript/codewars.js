@@ -501,3 +501,12 @@ function findDifference(a, b) {
 function squareSum(num) {
     return num.length != 0 ? num.reduce((preVal, curVal) => preVal + Math.pow(curVal, 2), 0) : 0
 }
+
+//8kyu
+//link https://www.codewars.com/kata/56bc28ad5bdaeb48760009b0/train/javascript
+function removeChar(str){
+  return str.substring(1,str.length-1)
+};
+
+
+
