@@ -486,7 +486,7 @@ function tribonacci(arr, n) {
         return holder
     }
     return n < 0 ? [] : holder.slice(0, n)
-
+}
 
 // 8kyu Difference of Volumes of Cuboids
 //link https://www.codewars.com/kata/58cb43f4256836ed95000f97/solutions/javascript
@@ -494,7 +494,7 @@ function findDifference(a, b) {
     let sumA = a.reduce((curVal, preVal) => curVal * preVal)
     let sumB = b.reduce((curVal, preVal) => curVal * preVal)
     return Math.abs(sumA - sumB)
-    }
+}
 
 //8kyu Square(n) Sum
 //link: https://www.codewars.com/kata/515e271a311df0350d00000f/train/javascript
@@ -504,9 +504,16 @@ function squareSum(num) {
 
 //8kyu
 //link https://www.codewars.com/kata/56bc28ad5bdaeb48760009b0/train/javascript
-function removeChar(str){
-  return str.substring(1,str.length-1)
-};
+function removeChar(str) {
+    return str.substring(1, str.length - 1)
+}
 
+//8kyu Find the smallest integer in the array
+// link: https://www.codewars.com/kata/55a2d7ebe362935a210000b2/solutions/javascript
+class SmallestIntegerFinder {
+    findSmallestInt(args) {
+        return Math.min(...args)
+    }
+}
 
 
