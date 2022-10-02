@@ -516,4 +516,17 @@ class SmallestIntegerFinder {
     }
 }
 
+//6kyu Convert string to camel case
+//link https://www.codewars.com/kata/517abf86da9663f1d2000003/train/javascript
+function toCamelCase(str) {
+    let arr = str.split('')
+    for (let i = 0; i < arr.length; i++) {
+        if (str[i - 1] === '-' || str[i - 1] === '_') {
+            arr[i] = arr[i].toUpperCase()
+            arr[i - 1] = ''
+        }
+    }
+    return arr.join('')
+}
+
 
