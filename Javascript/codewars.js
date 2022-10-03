@@ -528,5 +528,8 @@ function toCamelCase(str) {
     }
     return arr.join('')
 }
-
-
+//8kyu Is the string uppercase ?
+//link: https://www.codewars.com/kata/56cd44e1aa4ac7879200010b/train/javascript
+String.prototype.isUpperCase = function () {
+    return this.toUpperCase() === this.substring(0)
+}
