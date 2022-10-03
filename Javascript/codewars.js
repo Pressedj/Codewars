@@ -533,3 +533,16 @@ function toCamelCase(str) {
 String.prototype.isUpperCase = function () {
     return this.toUpperCase() === this.substring(0)
 }
+
+
+//Decode the Morse code 6kyu
+//link https://www.codewars.com/kata/54b724efac3d5402db00065e/train/javascript
+decodeMorse = function (morseCode) {
+    let arr = morseCode.split(' ').map(e => e === '' ? ' ' : MORSE_CODE[e])
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] === ' ' && arr[i - 1] === ' ') {
+            arr[i - 1] = ''
+        }
+    }
+    return arr.join('').trim()
+}
