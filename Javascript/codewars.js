@@ -552,3 +552,16 @@ decodeMorse = function (morseCode) {
 function booleanToString(b) {
     return b.toString()
 }
+//8kyu Equal Sides Of An Array
+//link https://www.codewars.com/kata/5679aa472b8f57fb8c000047/train/javascript
+function findEvenIndex(arr) {
+    let temp = Array.from(arr).reverse()
+    for (let i = 0; i < arr.length; i++) {
+        let right = arr.slice(i + 1).reduce((preVal, curVal) => preVal + curVal, 0)
+        let left = temp.slice(arr.length - i).reduce((preVal, curVal) => preVal + curVal, 0)
+        if (left === right) {
+            return i
+        }
+    }
+    return -1
+}
