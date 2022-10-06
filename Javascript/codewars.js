@@ -589,3 +589,34 @@ function repeatStr(n, s) {
     }
     return str;
 }
+// 5kyu Product of consecutive Fib numbers
+//link https://www.codewars.com/kata/5541f58a944b85ce6d00006a/train/javascript
+function productFib(prod) {
+    let fib = [0, 1]
+    let tempProd = 0
+    for (let i = 0; tempProd < prod; i++) {
+        tempProd = fib[i] * fib[i + 1]
+        if (tempProd === prod) {
+            return [fib[i], fib[i + 1], true]
+        }
+        fib.push(fib[i] + fib[i + 1])
+    }
+    return [fib[fib.length - 3], fib[fib.length - 2], false]
+}
+
+//refactored to smaller
+function productFib(prod) {
+    let fib = [0, 1]
+    for (let i = 0; (fib[i] * fib[i + 1]) < prod; i++) {
+        fib.push(fib[i] + fib[i + 1])
+    }
+    return (fib[fib.length - 2] * fib[fib.length - 1]) === prod ?
+        [fib[fib.length - 2], fib[fib.length - 1], true] : [fib[fib.length - 2], fib[fib.length - 1], false]
+}
+
+
+//8kyu Remove String Spaces
+//link https://www.codewars.com/kata/57eae20f5500ad98e50002c5/train/javascript
+function noSpace(x) {
+    return x.split(' ').join('')
+}
