@@ -620,3 +620,9 @@ function productFib(prod) {
 function noSpace(x) {
     return x.split(' ').join('')
 }
+
+// 8kyu Keep up the hoop
+// link: https://www.codewars.com/kata/55cb632c1a5d7b3ad0000145/train/javascript
+function hoopCount(n) {
+    return n >= 10 ? "Great, now move on to tricks" : "Keep at it until you get it"
+}
