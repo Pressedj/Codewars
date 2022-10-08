@@ -626,3 +626,16 @@ function noSpace(x) {
 function hoopCount(n) {
     return n >= 10 ? "Great, now move on to tricks" : "Keep at it until you get it"
 }
+
+//6kyu Split Strings
+//link: https://www.codewars.com/kata/515de9ae9dcfc28eb6000001/train/javascript
+function solution(str) {
+    let a = []
+    let q = str.trim().split('')
+    for (let i = 0; i < (str.length / 2); i++) {
+        let val = q.splice(0, 2)
+        val.length < 2 ?
+            a.push((val[0] + '_')) : a.push(val.join(''))
+    }
+    return a
+}
