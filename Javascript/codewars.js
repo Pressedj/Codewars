@@ -639,3 +639,18 @@ function solution(str) {
     }
     return a
 }
+//8kyu Grasshopper - Summation
+//link: https://www.codewars.com/kata/55d24f55d7dd296eb9000030/train/javascript
+var summation = function (num) {
+    let count = 0
+    for (let i = 1; i <= num; i++){
+      count += i
+    }
+    return count
+  }
+//8kyu The Feast of Many Beasts
+//link: https://www.codewars.com/kata/5aa736a455f906981800360d/train/javascript
+
+  function feast(beast, dish) {
+    return (dish[0] === beast[0] && dish[dish.length-1] === beast[beast.length-1])
+    }
