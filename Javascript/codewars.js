@@ -654,3 +654,19 @@ var summation = function (num) {
   function feast(beast, dish) {
     return (dish[0] === beast[0] && dish[dish.length-1] === beast[beast.length-1])
     }
+
+//6kyu Are they the "same"?
+//link: https://www.codewars.com/kata/550498447451fbbd7600041c/train/javascript
+function comp(arr1, arr2){
+    if (Array.isArray(arr1) === false || Array.isArray(arr2) === false){
+      return false
+    }
+     arr1.sort(function(a, b) {return a - b});
+     arr2.sort(function(a, b) {return a - b});
+     for (let i = 0; i < arr1.length; i++){
+       if (arr1[i] ** 2 !== arr2[i]){
+         return false
+       }
+     }
+     return true
+   }
