@@ -670,3 +670,21 @@ function comp(arr1, arr2){
      }
      return true
    }
+
+   // 6 kyu Find the missing letter
+   //link https://www.codewars.com/kata/5839edaa6754d6fec10000a2/train/javascript
+function findMissingLetter(array){
+const alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+let array2 = array.join().toLowerCase().split(',').sort()
+for (let i = 0; i < array.length; i++){
+    let start = alphabet.indexOf(array2[0])
+    if (array2[i] !== alphabet[start + i]){
+    //check case
+    return array[0] === array[0].toUpperCase() ? alphabet[start + i].toUpperCase() : alphabet[start + i]
+    console.log(alphabet[start + i])
+    }
+}
+}
+
+//Write an algorithm that takes an array and moves all of the zeros to the end, preserving the order of the other elements.
+//moveZeros([false,1,0,1,2,0,1,3,"a"]) // returns[false,1,1,2,1,3,"a",0,0]
