@@ -685,6 +685,19 @@ for (let i = 0; i < array.length; i++){
     }
 }
 }
+// 6 kyu Sort the odd
+//link: https://www.codewars.com/kata/578aa45ee9fd15ff4600090d/train/javascript
+function sortArray(array) {
+    let oddFilter = array.filter(e => e % 2 !== 0).sort(function(a,b){
+      return a-b
+    })
+    for (let i = 0; i < array.length; i ++){
+      if (array[i] % 2 !== 0){
+      array[i] = oddFilter.shift()
+        }
+    }
+    return array
+  }
 
 //Write an algorithm that takes an array and moves all of the zeros to the end, preserving the order of the other elements.
 //moveZeros([false,1,0,1,2,0,1,3,"a"]) // returns[false,1,1,2,1,3,"a",0,0]
