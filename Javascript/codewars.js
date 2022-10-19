@@ -698,6 +698,16 @@ function sortArray(array) {
     }
     return array
   }
+// 6kyu Two Sum
+// https://www.codewars.com/kata/52c31f8e6605bcc646000082/train/javascript
+  function twoSum(num, target) {
+  for (let i = 0; i < num.length; i++ ){
+    let check = target - num[i]
+    if (num.indexOf(check, i) > -1 && num.indexOf(check) !== i){
+      return ([num.indexOf(num[i]), num.indexOf(check, i)])
+    }
+  }
+}
 
 //Write an algorithm that takes an array and moves all of the zeros to the end, preserving the order of the other elements.
 //moveZeros([false,1,0,1,2,0,1,3,"a"]) // returns[false,1,1,2,1,3,"a",0,0]
