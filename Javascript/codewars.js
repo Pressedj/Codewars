@@ -721,3 +721,15 @@ function openOrSenior(data){
     }
     return temp
   }
+
+  //6kyu Build Tower
+  //link https://www.codewars.com/kata/576757b1df89ecf5bd00073b/train/javascript
+  function towerBuilder(floors){
+    let space,star, tower = [];
+    for(i = 1; i <= floors; i++){
+      space = " ".repeat(floors - i);
+      star  = "*".repeat((2*i) - 1);
+      tower.push(`${space}${star}${space}`);
+    }
+    return tower
+    }
