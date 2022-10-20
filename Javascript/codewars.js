@@ -711,3 +711,13 @@ function sortArray(array) {
 
 //Write an algorithm that takes an array and moves all of the zeros to the end, preserving the order of the other elements.
 //moveZeros([false,1,0,1,2,0,1,3,"a"]) // returns[false,1,1,2,1,3,"a",0,0]
+
+// 7 kyu Categorize New Member
+//link: https://www.codewars.com/kata/5502c9e7b3216ec63c0001aa/train/javascript
+function openOrSenior(data){
+    let temp = []
+    for (let i = 0; i < data.length; i++){
+      (data[i][0] >= 55 && data[i][1] > 7) ? temp.push('Senior') : temp.push('Open')
+    }
+    return temp
+  }
