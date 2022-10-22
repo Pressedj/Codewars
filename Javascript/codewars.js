@@ -700,7 +700,7 @@ function sortArray(array) {
   }
 // 6kyu Two Sum
 // https://www.codewars.com/kata/52c31f8e6605bcc646000082/train/javascript
-  function twoSum(num, target) {
+function twoSum(num, target) {
   for (let i = 0; i < num.length; i++ ){
     let check = target - num[i]
     if (num.indexOf(check, i) > -1 && num.indexOf(check) !== i){
@@ -709,8 +709,6 @@ function sortArray(array) {
   }
 }
 
-//Write an algorithm that takes an array and moves all of the zeros to the end, preserving the order of the other elements.
-//moveZeros([false,1,0,1,2,0,1,3,"a"]) // returns[false,1,1,2,1,3,"a",0,0]
 
 // 7 kyu Categorize New Member
 //link: https://www.codewars.com/kata/5502c9e7b3216ec63c0001aa/train/javascript
@@ -733,3 +731,12 @@ function openOrSenior(data){
     }
     return tower
     }
+//Write an algorithm that takes an array and moves all of the zeros to the end, preserving the order of the other elements.
+//moveZeros([false,1,0,1,2,0,1,3,"a"]) // returns[false,1,1,2,1,3,"a",0,0]
+function moveZeros(arr){
+    arrFilter = arr.filter(e => e !== 0)
+    for(let i = 0;i <= (arr.length - arrFilter.length); i++){
+        arrFilter.push(0)
+    }
+    console.log(arrFilter)
+  }
